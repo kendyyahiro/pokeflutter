@@ -1,13 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
-import 'package:pokeflutter/src/features/core/enums/types_enum.dart';
+import 'package:pokeflutter/src/features/core/enums/pokemon_types_enum.dart';
 
 class PokemonModel {
   String name;
   String url;
   int order;
-  List<TypesEnum> types;
+  List<PokemonTypesEnum> types;
   String dreamWorld;
 
   PokemonModel({
@@ -40,7 +40,7 @@ class PokemonModel {
       name: map['name'] as String,
       url: map['url'] as String,
       order: map['order'] as int,
-      types: map['types'] as List<TypesEnum>,
+      types: map['types'] as List<PokemonTypesEnum>,
       dreamWorld: map['dreamWorld'] as String,
     );
   }

@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:pokeflutter/src/features/core/enums/types_enum.dart';
 
 class ColorsType {
-  static Color normal = const Color(0xFFA8A878);
-  static Color fighting = const Color(0xFFC03028);
-  static Color flying = const Color(0xFFA890F0);
-  static Color poison = const Color(0xFFA040A0);
-  static Color ground = const Color(0xFFE0C068);
-  static Color rock = const Color(0xFFB8A038);
-  static Color bug = const Color(0xFFA8B820);
-  static Color ghost = const Color(0xFF705898);
-  static Color steel = const Color(0xFFB8B8D0);
-  static Color stellar = const Color(0xFF7CC7B2);
-  static Color fire = const Color(0xFFF08030);
-  static Color water = const Color(0xFF6890F0);
-  static Color grass = const Color(0xFF36BF36);
-  static Color electric = const Color(0xFFF8D030);
-  static Color psychic = const Color(0xFFF85888);
-  static Color ice = const Color(0xFF98D8D8);
-  static Color dragon = const Color(0xFF7038F8);
-  static Color dark = const Color(0xFF705746);
-  static Color fairy = const Color(0xFFEE99AC);
-  static Color unknown = const Color(0xFFA8A878);
+  static const Color normal = Color(0xFFA8A878);
+  static const Color fighting = Color(0xFFC03028);
+  static const Color flying = Color(0xFFA890F0);
+  static const Color poison = Color(0xFFA040A0);
+  static const Color ground = Color(0xFFE0C068);
+  static const Color rock = Color(0xFFB8A038);
+  static const Color bug = Color(0xFFA8B820);
+  static const Color ghost = Color(0xFF705898);
+  static const Color steel = Color(0xFFB8B8D0);
+  static const Color stellar = Color(0xFF7CC7B2);
+  static const Color fire = Color(0xFFF08030);
+  static const Color water = Color(0xFF6890F0);
+  static const Color grass = Color(0xFF36BF36);
+  static const Color electric = Color(0xFFF8D030);
+  static const Color psychic = Color(0xFFF85888);
+  static const Color ice = Color(0xFF98D8D8);
+  static const Color dragon = Color(0xFF7038F8);
+  static const Color dark = Color(0xFF705746);
+  static const Color fairy = Color(0xFFEE99AC);
+  static const Color unknown = Color(0xFFA8A878);
 
   Color getColor(type) {
     switch (type) {

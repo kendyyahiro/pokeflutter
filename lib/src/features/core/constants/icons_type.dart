@@ -1,63 +1,63 @@
-import 'package:pokeflutter/src/features/core/enums/types_enum.dart';
+import 'package:pokeflutter/src/features/core/enums/pokemon_types_enum.dart';
 
 class IconsType {
-  static String normal = 'assets/icons/normal.svg';
-  static String fighting = 'assets/icons/fighting.svg';
-  static String flying = 'assets/icons/flying.svg';
-  static String poison = 'assets/icons/poison.svg';
-  static String ground = 'assets/icons/ground.svg';
-  static String rock = 'assets/icons/rock.svg';
-  static String bug = 'assets/icons/bug.svg';
-  static String ghost = 'assets/icons/ghost.svg';
-  static String steel = 'assets/icons/steel.svg';
-  static String stellar = 'assets/icons/stellar.svg';
-  static String fire = 'assets/icons/fire.svg';
-  static String water = 'assets/icons/water.svg';
-  static String grass = 'assets/icons/grass.svg';
-  static String electric = 'assets/icons/electric.svg';
-  static String psychic = 'assets/icons/psychic.svg';
-  static String ice = 'assets/icons/ice.svg';
-  static String dragon = 'assets/icons/dragon.svg';
-  static String dark = 'assets/icons/dark.svg';
-  static String fairy = 'assets/icons/fairy.svg';
+  static const String normal = 'assets/icons/normal.svg';
+  static const String fighting = 'assets/icons/fighting.svg';
+  static const String flying = 'assets/icons/flying.svg';
+  static const String poison = 'assets/icons/poison.svg';
+  static const String ground = 'assets/icons/ground.svg';
+  static const String rock = 'assets/icons/rock.svg';
+  static const String bug = 'assets/icons/bug.svg';
+  static const String ghost = 'assets/icons/ghost.svg';
+  static const String steel = 'assets/icons/steel.svg';
+  static const String stellar = 'assets/icons/stellar.svg';
+  static const String fire = 'assets/icons/fire.svg';
+  static const String water = 'assets/icons/water.svg';
+  static const String grass = 'assets/icons/grass.svg';
+  static const String electric = 'assets/icons/electric.svg';
+  static const String psychic = 'assets/icons/psychic.svg';
+  static const String ice = 'assets/icons/ice.svg';
+  static const String dragon = 'assets/icons/dragon.svg';
+  static const String dark = 'assets/icons/dark.svg';
+  static const String fairy = 'assets/icons/fairy.svg';
 
   String getIcon(type) {
     switch (type) {
-      case TypesEnum.normal:
+      case PokemonTypesEnum.normal:
         return IconsType.normal;
-      case TypesEnum.fighting:
+      case PokemonTypesEnum.fighting:
         return IconsType.fighting;
-      case TypesEnum.flying:
+      case PokemonTypesEnum.flying:
         return IconsType.flying;
-      case TypesEnum.poison:
+      case PokemonTypesEnum.poison:
         return IconsType.poison;
-      case TypesEnum.ground:
+      case PokemonTypesEnum.ground:
         return IconsType.ground;
-      case TypesEnum.rock:
+      case PokemonTypesEnum.rock:
         return IconsType.rock;
-      case TypesEnum.bug:
+      case PokemonTypesEnum.bug:
         return IconsType.bug;
-      case TypesEnum.ghost:
+      case PokemonTypesEnum.ghost:
         return IconsType.ghost;
-      case TypesEnum.steel:
+      case PokemonTypesEnum.steel:
         return IconsType.steel;
-      case TypesEnum.stellar:
+      case PokemonTypesEnum.stellar:
         return IconsType.stellar;
-      case TypesEnum.fire:
+      case PokemonTypesEnum.fire:
         return IconsType.fire;
-      case TypesEnum.water:
+      case PokemonTypesEnum.water:
         return IconsType.water;
-      case TypesEnum.grass:
+      case PokemonTypesEnum.grass:
         return IconsType.grass;
-      case TypesEnum.electric:
+      case PokemonTypesEnum.electric:
         return IconsType.electric;
-      case TypesEnum.psychic:
+      case PokemonTypesEnum.psychic:
         return IconsType.psychic;
-      case TypesEnum.ice:
+      case PokemonTypesEnum.ice:
         return IconsType.ice;
-      case TypesEnum.dragon:
+      case PokemonTypesEnum.dragon:
         return IconsType.dragon;
-      case TypesEnum.dark:
+      case PokemonTypesEnum.dark:
         return IconsType.dark;
       default:
         return IconsType.fairy;

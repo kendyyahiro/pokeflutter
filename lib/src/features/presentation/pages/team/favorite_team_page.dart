@@ -1,9 +1,8 @@
 import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 import 'package:pokeflutter/src/features/presentation/pages/team/widgets/pokemon_widget.dart';
+import 'package:pokeflutter/src/features/presentation/widgets/button_back_widget.dart';
 
 class FavoriteTeamPage extends StatefulWidget {
   static String routeName = 'favorite-team-page';
@@ -60,45 +59,42 @@ class _FavoriteTeamPageState extends State<FavoriteTeamPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: const Text(
+          'My Team',
+          style: TextStyle(fontSize: 14, color: Colors.black87),
+        ),
+        centerTitle: true,
+      ),
       body: SafeArea(
-        child: Center(
-          child: Column(
-            children: [
-              const SizedBox(height: 40),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    'My Favorite Team',
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 60),
-              pokemonList.length != 6
-                  ? const CircularProgressIndicator()
-                  : Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Column(
-                        children: [
-                          PokemonWidget(pokemon: pokemonList[0]),
-                          const SizedBox(height: 10),
-                          PokemonWidget(pokemon: pokemonList[1]),
-                          const SizedBox(height: 10),
-                          PokemonWidget(pokemon: pokemonList[2]),
-                          const SizedBox(height: 10),
-                          PokemonWidget(pokemon: pokemonList[3]),
-                          const SizedBox(height: 10),
-                          PokemonWidget(pokemon: pokemonList[4]),
-                          const SizedBox(height: 10),
-                          PokemonWidget(pokemon: pokemonList[5]),
-                          const SizedBox(height: 10),
-                        ],
-                      ),
+        child: Column(
+          children: [
+            const SizedBox(height: 12),
+            const ButtonBackWidget(),
+            const SizedBox(height: 12),
+            pokemonList.length != 6
+                ? const CircularProgressIndicator()
+                : Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Column(
+                      children: [
+                        PokemonWidget(pokemon: pokemonList[0]),
+                        const SizedBox(height: 10),
+                        PokemonWidget(pokemon: pokemonList[1]),
+                        const SizedBox(height: 10),
+                        PokemonWidget(pokemon: pokemonList[2]),
+                        const SizedBox(height: 10),
+                        PokemonWidget(pokemon: pokemonList[3]),
+                        const SizedBox(height: 10),
+                        PokemonWidget(pokemon: pokemonList[4]),
+                        const SizedBox(height: 10),
+                        PokemonWidget(pokemon: pokemonList[5]),
+                        const SizedBox(height: 10),
+                      ],
                     ),
-            ],
-          ),
+                  ),
+          ],
         ),
       ),
     );

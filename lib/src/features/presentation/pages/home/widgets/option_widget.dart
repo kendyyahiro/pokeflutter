@@ -1,19 +1,33 @@
 import 'package:flutter/material.dart';
 
-class OptionWidget extends StatelessWidget {
+class OptionWidget extends StatefulWidget {
   final String title;
   final String route;
+  final Function func;
+  final String optionSelected;
+  final bool isLoading;
+
   const OptionWidget({
     super.key,
     required this.route,
     required this.title,
+    required this.func,
+    required this.optionSelected,
+    required this.isLoading,
   });
 
   @override
+  State<OptionWidget> createState() => _OptionWidgetState();
+}
+
+class _OptionWidgetState extends State<OptionWidget> {
+  @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Navigator.of(context).pushReplacementNamed(route);
+      onTap: () {},
+      onTapDown: (details) {
+        widget.func(widget.title);
+        Navigator.of(context).pushNamed(widget.route);
       },
       child: Container(
         width: 300,
@@ -34,11 +48,17 @@ class OptionWidget extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-          child: Center(
-            child: Text(
-              title,
-              style: const TextStyle(fontSize: 12),
-            ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              widget.optionSelected == widget.title
+                  ? const Icon(Icons.arrow_forward_ios_rounded, size: 14)
+                  : const Text('', style: TextStyle(fontSize: 14)),
+              Text(
+                widget.title,
+                style: const TextStyle(fontSize: 12),
+              ),
+            ],
           ),
         ),
       ),

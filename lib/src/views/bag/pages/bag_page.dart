@@ -1,9 +1,11 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pokeflutter/src/core/enums/item_type_enum.dart';
 import 'package:pokeflutter/src/views/bag/widgets/item_widget.dart';
+import 'package:pokeflutter/src/views/shared/widgets/button_back_widget.dart';
 
 class BagPage extends StatefulWidget {
   static String routeName = 'bag-page';
@@ -142,7 +144,6 @@ class _BagPageState extends State<BagPage> {
           setState(() {});
         }
       }
-      print(items[type]);
     } catch (_) {}
   }
 
@@ -153,33 +154,51 @@ class _BagPageState extends State<BagPage> {
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          title: const Text(
-            'Bag',
-            style: TextStyle(fontSize: 14, color: Colors.black87),
-          ),
           centerTitle: true,
           backgroundColor: Colors.white,
-          bottom: TabBar(
-            indicatorColor: Colors.black,
-            tabs: ItemTypeEnum.values
-                .map(
-                  (tabName) => Tab(
-                    child: tabName.widget ??
-                        SvgPicture.asset(
-                          'assets/icons/poke-ball.svg',
-                          fit: BoxFit.contain,
-                          height: 28,
-                          width: 28,
+          leadingWidth: 120,
+          leading: const ButtonBackWidget(),
+          title: const Text(
+            'Bag',
+            style: TextStyle(
+              fontSize: 14,
+              color: Colors.black87,
+            ),
+          ),
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(60), // here the desired height
+            child: Column(
+              children: [
+                TabBar(
+                  indicatorColor: Colors.black,
+                  tabs: ItemTypeEnum.values
+                      .map(
+                        (tabName) => Tab(
+                          child: tabName.widget ??
+                              SvgPicture.asset(
+                                'assets/icons/poke-ball.svg',
+                                fit: BoxFit.contain,
+                                height: 28,
+                                width: 28,
+                              ),
                         ),
-                  ),
-                )
-                .toList(),
+                      )
+                      .toList(),
+                ),
+              ],
+            ),
           ),
         ),
-        body: TabBarView(
-          children: ItemTypeEnum.values
-              .map((type) => ItemWidget(items: items[type]))
-              .toList(),
+        body: Column(
+          children: [
+            Expanded(
+              child: TabBarView(
+                children: ItemTypeEnum.values
+                    .map((type) => ItemWidget(items: items[type]))
+                    .toList(),
+              ),
+            ),
+          ],
         ),
       ),
     );

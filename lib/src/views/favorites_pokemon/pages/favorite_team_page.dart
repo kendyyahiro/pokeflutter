@@ -61,24 +61,32 @@ class _FavoriteTeamPageState extends State<FavoriteTeamPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+        leadingWidth: 120,
+        leading: const ButtonBackWidget(),
         title: const Text(
           'My Team',
-          style: TextStyle(fontSize: 14, color: Colors.black87),
+          style: TextStyle(
+            fontSize: 14,
+            color: Colors.black87,
+          ),
         ),
-        centerTitle: true,
       ),
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 12),
-            const ButtonBackWidget(),
-            const SizedBox(height: 12),
+            const SizedBox(height: 40),
             pokemonList.length != 6
                 ? const Center(child: CircularProgressIndicator())
                 : Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Column(
                       children: [
+                        // pokemonList
+                        // .map((pokemon) =>
+                        //     PokemonWidget(pokemon: pokemonList[0]))
+                        // .toList(),
                         PokemonWidget(pokemon: pokemonList[0]),
                         const SizedBox(height: 10),
                         PokemonWidget(pokemon: pokemonList[1]),

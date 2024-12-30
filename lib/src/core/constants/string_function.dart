@@ -11,11 +11,11 @@ class StringFunction {
       arrayPieces.add(sepparetedWord);
     });
 
-    arrayPieces.forEach((word) {
+    for (var word in arrayPieces) {
       word =
           "${word[0].toString().toUpperCase()}${word.toString().substring(1)} ";
       outPut += word;
-    });
+    }
 
     return outPut;
   }

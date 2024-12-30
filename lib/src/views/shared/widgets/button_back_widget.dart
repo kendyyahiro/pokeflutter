@@ -6,30 +6,45 @@ class ButtonBackWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Row(
-        children: [
-          ElevatedButton.icon(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+      padding: const EdgeInsets.fromLTRB(20, 8, 0, 8),
+      child: InkWell(
+        onTap: () => {Navigator.pop(context)},
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(
+              color: Colors.black54.withOpacity(0.4),
             ),
-            onPressed: () => {Navigator.pop(context)},
-            icon: const Icon(
-              Icons.arrow_back_ios_new_rounded,
-              size: 16,
-              color: Colors.black87,
-            ),
-            label: const Text(
-              'Press B',
-              style: TextStyle(
-                fontSize: 8,
-                color: Colors.black,
-                fontWeight: FontWeight.w600,
-              ),
-            ), // <-- Text
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                offset: const Offset(0, 2),
+                blurRadius: 10,
+                spreadRadius: 0,
+              )
+            ],
+            borderRadius: BorderRadius.circular(10),
           ),
-        ],
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Icon(
+                Icons.arrow_back_ios_new_rounded,
+                size: 16,
+                color: Colors.black87,
+              ),
+              Text(
+                'Press B',
+                style: TextStyle(
+                  fontSize: 8,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                ),
+              ), //
+            ],
+          ),
+        ),
       ),
     );
   }

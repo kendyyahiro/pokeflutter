@@ -36,33 +36,67 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            OptionWidget(
-                route: PokedexPage.routeName,
-                title: 'Pokédex',
-                func: changeOptionSelected,
-                optionSelected: optionSelected,
-                isLoading: isLoading),
-            const SizedBox(height: 16),
-            OptionWidget(
-                route: FavoriteTeamPage.routeName,
-                title: 'Pokémon',
-                func: changeOptionSelected,
-                optionSelected: optionSelected,
-                isLoading: isLoading),
-            const SizedBox(height: 16),
-            OptionWidget(
-                route: BagPage.routeName,
-                title: 'Bag',
-                func: changeOptionSelected,
-                optionSelected: optionSelected,
-                isLoading: isLoading),
-            const SizedBox(height: 16),
-          ],
-        ),
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/logo.png',
+                  height: 60,
+                  width: 60,
+                ),
+                const Text(
+                  'PokéFlutter',
+                  style: TextStyle(fontSize: 12),
+                ),
+                const SizedBox(height: 24),
+                OptionWidget(
+                    route: PokedexPage.routeName,
+                    title: 'Pokédex',
+                    func: changeOptionSelected,
+                    optionSelected: optionSelected,
+                    isLoading: isLoading),
+                const SizedBox(height: 16),
+                OptionWidget(
+                    route: FavoriteTeamPage.routeName,
+                    title: 'Pokémon',
+                    func: changeOptionSelected,
+                    optionSelected: optionSelected,
+                    isLoading: isLoading),
+                const SizedBox(height: 16),
+                OptionWidget(
+                    route: BagPage.routeName,
+                    title: 'Bag',
+                    func: changeOptionSelected,
+                    optionSelected: optionSelected,
+                    isLoading: isLoading),
+                const SizedBox(height: 16),
+              ],
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'Made by',
+                style: TextStyle(fontSize: 10),
+              ),
+              const SizedBox(width: 10),
+              Text(
+                'Kendy',
+                style: TextStyle(
+                  fontSize: 10,
+                  color: Colors.red.shade400,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8)
+        ],
       )),
     );
   }

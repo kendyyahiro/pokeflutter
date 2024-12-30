@@ -104,7 +104,7 @@ class _PokemonWidgetState extends State<PokemonWidget>
                             ),
                           ],
                         ),
-                        Text(
+                        const Text(
                           'Lv. 100',
                           style: TextStyle(
                             fontSize: 8,
@@ -115,7 +115,7 @@ class _PokemonWidgetState extends State<PokemonWidget>
                     ),
                     const SizedBox(height: 8),
                     LinearPercentIndicator(
-                      padding: EdgeInsets.only(left: 4),
+                      padding: const EdgeInsets.only(left: 4),
                       leading: const Text('HP', style: TextStyle(fontSize: 8)),
                       alignment: MainAxisAlignment.spaceBetween,
                       lineHeight: 8,

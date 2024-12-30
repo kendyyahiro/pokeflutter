@@ -17,7 +17,7 @@ class ModalBottomSheetWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FractionallySizedBox(
-      heightFactor: 0.75,
+      heightFactor: 0.9,
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(

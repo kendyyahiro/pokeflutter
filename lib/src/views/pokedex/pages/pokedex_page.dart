@@ -115,14 +115,20 @@ class _PokedexPageState extends State<PokedexPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        leadingWidth: 120,
+        leading: const ButtonBackWidget(),
         title: const Text(
           'Pokédex',
-          style: TextStyle(fontSize: 14, color: Colors.black87),
+          style: TextStyle(
+            fontSize: 14,
+            color: Colors.black87,
+          ),
         ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(30), // here the desired height
+          preferredSize: const Size.fromHeight(60), // here the desired height
           child: Column(
             children: [
               SizedBox(
@@ -182,13 +188,6 @@ class _PokedexPageState extends State<PokedexPage> {
       ),
       body: CustomScrollView(
         slivers: [
-          SliverList(
-            delegate: SliverChildListDelegate([
-              const SizedBox(height: 12),
-              const ButtonBackWidget(),
-              const SizedBox(height: 12),
-            ]),
-          ),
           pokemonList.isEmpty
               ? const SliverFillRemaining(
                   child: Center(child: CircularProgressIndicator()))

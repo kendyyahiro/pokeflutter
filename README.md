@@ -25,4 +25,8 @@ Aqui estão algumas capturas de tela da aplicação:
 ## 🚀 Como Executar o Projeto  
 1. Clone o repositório:  
    ```bash  
-   git clone https://github.com/kendyyahiro/pokeflutter  
+   git clone https://github.com/kendyyahiro/pokeflutter
+   
+2. flutter run:  
+   ```bash  
+   flutter run  

@@ -27,6 +27,6 @@ Aqui estão algumas capturas de tela da aplicação:
    ```bash  
    git clone https://github.com/kendyyahiro/pokeflutter
    
-2. flutter run:  
+2. Rode o projeto:  
    ```bash  
    flutter run  

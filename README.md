@@ -16,25 +16,11 @@ Este projeto é uma aplicação Flutter desenvolvida para ter uma primeira exper
 ## 🎨 Screenshots  
 Aqui estão algumas capturas de tela da aplicação:  
 
-<html lang="en">
-<head>
-  <style>
-    .image-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
-  </style>
-</head>
-<body>
-  <h2>🎨 Screenshots</h2>
-  <div class="image-container">
-    <img src="assets/screenshots/example1.png" alt="Tela Inicial" />
-    <img src="assets/screenshots/example2.png" alt="Tela de Login" />
-    <img src="assets/screenshots/example3.png" alt="Tela de Configurações" />
-  </div>
-</body>
-</html>
+<div class="image-container">
+  <img src="assets/screenshots/example1.png" alt="Tela Inicial" width=30%/>
+  <img src="assets/screenshots/example2.png" alt="Tela de Login" width=30%/>
+  <img src="assets/screenshots/example3.png" alt="Tela de Configurações" width=30%/>
+</div>
 
 ## 🚀 Como Executar o Projeto  
 1. Clone o repositório:  

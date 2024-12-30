@@ -39,9 +39,9 @@ Aqui estão algumas capturas de tela da aplicação:
 <body>
   <h2>🎨 Screenshots</h2>
   <div class="image-container">
-    <img src="assets/images/screen1.png" alt="Tela Inicial" class="screenshot" />
-    <img src="assets/images/screen2.png" alt="Tela de Login" class="screenshot" />
-    <img src="assets/images/screen3.png" alt="Tela de Configurações" class="screenshot" />
+    <img src="assets/screenshots/example1.png" alt="Tela Inicial" class="screenshot" />
+    <img src="assets/screenshots/example2.png" alt="Tela de Login" class="screenshot" />
+    <img src="assets/screenshots/example3.png" alt="Tela de Configurações" class="screenshot" />
   </div>
 </body>
 </html>
